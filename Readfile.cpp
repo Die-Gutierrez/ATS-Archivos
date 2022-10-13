@@ -17,7 +17,7 @@ void escribir()
     string words;
     ifstream archivo;
 
-    archivo.open("ejemplo.txt",ios::in);
+    archivo.open("C://Users//USUARIO//Desktop//VSC//C++//ATS-Archivos//ejemplo.txt",ios::in);
     if(archivo.fail())
     {
         cout<<"Ha habido un error!"<<endl;
