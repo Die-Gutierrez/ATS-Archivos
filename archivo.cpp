@@ -15,8 +15,12 @@ int main()
 }
 void escribir()
 {
+    string nombre;
     ofstream archivo; // Declaramos una variable.
-    archivo.open("C://Users//USUARIO//Desktop//VSC//C++//ATS-Archivos//ejemplo.txt",ios::out); // Abrimos el archivo.
+    
+    cout<<"Ingrese el nombre del archivo: ";
+    fflush(stdin); getline(cin, nombre);
+    archivo.open(nombre.c_str(),ios::out); // Abrimos el archivo.
     if(archivo.fail()) // Si el programa no funciona bien retorna 'true', y nos arroja un mensaje
     {
         cout<<"Programa no funcionando."<<endl;
