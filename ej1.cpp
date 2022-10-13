@@ -19,6 +19,7 @@ void escribir()
 {
     string texto, nombre;
     ofstream archivo;
+    int x=0;
 
     cout<<"Ingrese el nombre del archivo: ";
     fflush(stdin); getline(cin, nombre);
@@ -28,4 +29,13 @@ void escribir()
         cout<<"Programa fallando . . ."<<endl;
         exit(0);
     }
+    cout<<"Cuantas cadenas de texto desea ingresar?: ";
+    cin>>x;
+    for(int i=0;i<x;i++)
+    {
+        cout<<"Digite: ";
+        fflush(stdin); getline(cin, texto);
+        archivo<<texto<<"\n\n";
+    }
+    archivo.close();
 }
