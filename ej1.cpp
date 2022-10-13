@@ -18,6 +18,7 @@ int main()
 void escribir()
 {
     string texto, nombre;
+    char op;
     ofstream archivo;
     int x=0;
 
@@ -29,13 +30,14 @@ void escribir()
         cout<<"Programa fallando . . ."<<endl;
         exit(0);
     }
-    cout<<"Cuantas cadenas de texto desea ingresar?: ";
-    cin>>x;
-    for(int i=0;i<x;i++)
+    do
     {
-        cout<<"Digite: ";
+        cout<<"Ingrese un texto: ";
         fflush(stdin); getline(cin, texto);
-        archivo<<texto<<"\n\n";
-    }
+        archivo<<texto<<endl;
+        cout<<"¿Desea ingresar mas texto?(S/N): ";
+        fflush(stdin); cin>>op;
+    } while ((op == 'S')||(op == 's'));
+    
     archivo.close();
 }
